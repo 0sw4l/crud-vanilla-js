@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+</head>
+<body>
+
+
+    <div class="container mover-abajo">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4 mover-abajo" id="alert-info">
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                    <strong>Escriba un nombre</strong>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-4 mover-abajo hidden" id="alert-success">
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                    <strong>Excelente!</strong> nombre guardado con exito
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-4 mover-abajo hidden" id="alert-error">
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                    <strong>Error!</strong> el nombre ya existe!
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-4 mover-abajo hidden" id="alert-warning">
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                    </button>
+                    <strong>Error!</strong> Debe escribir un nombre
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="escriba el nombre" id="nombre">
+                </div>
+                <a class="btn btn-success btn-block" id="crear">
+                    Crear <i class="fa fa-plus"></i>
+                </a>
+                <a class="btn btn-warning btn-block hidden" id="actualizar">
+                    Actualizar <i class="fa fa-refresh fa-spin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row mover-abajo">
+            <div class="col-md-4 col-md-offset-4">
+                <table class="table table-bordered table-responsive table-hover table-striped table-default hidden" id="tabla">
+                    <thead id="cabecera">
+                        <tr>
+                            <th class="text-left">
+                                Nombre
+                            </th>
+                            <th class="text-center">
+                                acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="nombres">
+                        <tr class="hidden">
+                            <td class="text-left">
+                                oswaldo
+                            </td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-info update" data-id="">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a class="btn btn-xs btn-danger delete" data-id="">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="jumbotron" id="mensaje">
+                    <h4 class="text-center">
+                        Bienvenido <i class="fa fa-heart text-danger"></i>!
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

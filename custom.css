@@ -1,0 +1,12 @@
+body {
+    background: #1ca1c7;
+}
+
+
+.mover-abajo {
+    margin-top: 5%;
+}
+
+#cabecera, #nombres {
+    background-color: white;
+}
